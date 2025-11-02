@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.login-container:hover {
+    transform: translateY(5px); 
+}
+.container {
+    
+    width: 100%;
+    max-width: 600px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.container:hover {
+    transform: translateY(3px); 
+}
+
+.form-cadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+
+.input-group {
+    margin-bottom: 12px;
+    /* We don't need position: relative here */
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.input-group input {
+    /* Removed width: 100%; here to avoid conflicting with .password-wrapper input */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #9b59b6; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.3);
+}
+
+
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-login:hover {
+    background: #8e44ad; 
+}
+
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #71b7e6;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+} */

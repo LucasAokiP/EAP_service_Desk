@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de Acesso</title>
+    
+    <link rel="stylesheet" type="text/css" href="../Style/login.css"> 
+
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Acesso ao Sistema</h2>
+        <form id="loginForm">
+            
+            <div class="input-group">
+                <label for="email">E-mail ou Usuário</label>
+                <input type="text" id="email" name="email" placeholder="Digite seu e-mail" required>
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Senha</label>
+
+                <input type="password" id="senha" name="senha" placeholder="Sua senha secreta" required>
+            </div>
+
+            <button type="submit" class="btn-login">Entrar</button>
+
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+            
+            <p id="feedbackMessage" class="mt-4 text-center"></p>
+
+        </form>
+    </div>
+
+    <script src="main.js"></script> 
+
+</body>
+</html>
