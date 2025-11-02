@@ -15,21 +15,26 @@
         <nav>
             <a href="paginaPrincipal.html">Home</a>
             <a href="cadastro.html">Cadastro</a>
+            <a href="gerenciarChamado.html">Chamados</a>
 
 
         </nav>
     </header>
 
-    <div>
-        <div class="menu-ticket">
-            <button class="btn-ticket">
-                <a class="link-btn" href="solicitacaoChamdo.html" style="text-decoration: none;">Meus Chamados</a>
-            </button>
-            <button class="btn-ticket">Abrir Chamados</button>
-            <button class="btn-ticket">Perguntas Frequentes</button>
+       <div class="container-lista">
+        <h1>Lista de Chamados</h1>
+        
+
+        <div id="lista-chamados">
+   
         </div>
+
+        <button id="btn-carregar-chamdos" onclick="carregarDados()" style="margin-top: 20px; padding: 10px 15px; background: #71b7e6; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            Carregar Lista
+        </button>
     </div>
 
+    <script src="listaChamados.js"></script>
 </body>
 
 </html>

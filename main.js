@@ -41,7 +41,7 @@ if (form) {
             nome: nome,
             senha: senha
         }).toString();
-        
+
         try {
             debugger
             const response = await fetch(url)
@@ -61,9 +61,9 @@ if (form) {
                 if (passwordGroup) {
                     passwordGroup.classList.add('input-error');
                     passwordGroupUsuario.classList.add('input-error')
-                    }
+                }
 
-                    feedback.textContent = 'Usuário ou senha invalidos';
+                feedback.textContent = 'Usuário ou senha invalidos';
                 console.error("Login FALHOU:", data.detail);
 
             } else {
@@ -153,7 +153,7 @@ if (formCadastro) {
 
     });
 }
-
+// mostrar senha ao clicar no olho
 const CLOSED_EYE_SRC = 'img/closed-eye1.png';
 const OPENED_EYE_SRC = 'img/opened-eye.png';
 const CLOSED_EYE_ALT = 'Mostrar Senha';
@@ -174,6 +174,7 @@ function mostrarSenha() {
 
 
 }
+// recupera elementos da pagina html
 document.addEventListener('DOMContentLoaded', () => {
 
     debugger
@@ -193,6 +194,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-function corMudar() {
-
-}
