@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário - JS Puro</title>
-    <link rel="stylesheet" href="login.css">
-    <script src="main.js" defer></script>
-    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="../Styles/login.css">
+    <link rel="stylesheet" href="../Styles/header.css">
 </head>
 
 <body>
@@ -33,15 +32,19 @@
             <div class="input-group">
                 <label for="Email">Email</label>
                 <input class="input-group" placeholder="Ex: exemplo@email.com" type="email" id="input-email"
-                    name="email" required>
+                name="email" required>
             </div>
             <div class="input-group">
                 <label for="Senha">Senha</label>
-                <input class="input-group" placeholder="123Senha0" type="password" id="input-senha" name="senha"
-                    required>
+                <input class="input-group" placeholder="123Senha0" type="password" id="input-senha" name="senha" required>
+            </div>
+            <div class="input-group">
+                <label for="ConfirmarSenha">Confirmar Senha</label>
+                <input class="input-group" placeholder="123Senha0" type="password" id="input-confirmar-senha"
+                name="confirmar-senha" required>
             </div>
 
-            <button class="btn" type='submit' id="btn-cadastrar">
+            <button class="btn" type='submit'>
                 Cadastrar
             </button>
         </form>
@@ -51,6 +54,7 @@
         </div>
         <p id="feedbackMessage" class="mt-4 text-center"></p>
     </div>
+    <script src="../JS/cadastro.js"></script>
 </body>
 
 </html>
