@@ -2,16 +2,22 @@ const nome = document.getElementById('input-nome');
 const idade = document.getElementById('input-idade');
 const email = document.getElementById('input-email');
 const senha = document.getElementById('input-senha');
-const botaoCadastrar = document.getElementById('btn-cadastrar');
+const confSenha = document.getElementById('input-confirmar-senha');
+const form = document.getElementById('form-cadastro');
 
-botaoCadastrar.addEventListener('submit', (e) => {
-    if (nome.value === '' || idade.value === '' || email.value === '' || senha.value === '') {
-        alert('Por favor, preencha todos os campos.');
-        e.preventDefault();
-        return;
-        }
-        else{
-
-    }
+form.addEventListener('submit', function(e) {
     e.preventDefault();
-})
+
+    if (!nome.value || !idade.value || !email.value) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+    
+    if(senha.value !== confSenha.value){
+        alert("As senhas não coincidem!");
+        return;
+    }
+
+    alert("Cadastro realizado com sucesso!");
+    window.location.href = "./login.html";
+});
