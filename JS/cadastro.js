@@ -18,7 +18,7 @@ form.addEventListener('submit', function(e) {
     }
     
     alert("Cadastro realizado com sucesso!");
-    window.location.href = "./login.html";
+    window.location.href = "../index.html";
 });
 
 /*
