@@ -53,7 +53,7 @@ if (form) {
                 feedback.className = 'mt-4 text-center text-green-600 font-bold';
                 alert('Login realizado com sucesso')
                 console.log('Login SUCESSO:', data);
-                window.location.replace('paginaPrincipal.html');
+                window.location.replace('Pages/paginaPrincipal.html');
 
 
             } else if (response.status === 401) {
@@ -154,8 +154,8 @@ if (formCadastro) {
     });
 }
 // mostrar senha ao clicar no olho
-const CLOSED_EYE_SRC = 'img/closed-eye1.png';
-const OPENED_EYE_SRC = 'img/opened-eye.png';
+const CLOSED_EYE_SRC = '../img/closed-eye1.png';
+const OPENED_EYE_SRC = '../img/opened-eye.png';
 const CLOSED_EYE_ALT = 'Mostrar Senha';
 const OPENED_EYE_ALT = 'Ocultar Senha';
 

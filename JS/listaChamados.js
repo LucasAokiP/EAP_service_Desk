@@ -24,7 +24,7 @@ async function carregarDados() {
             }
 
         } else {
- 
+
             throw new Error(`Erro HTTP: ${response.status} - ${response.statusText}`);
         }
 
@@ -68,3 +68,63 @@ async function carregarDados() {
     }
 }
 document.addEventListener('DOMContentLoaded', carregarDados);
+
+
+
+async function graficoBarras() {
+
+    const response = fetch('http//localhost:8000/buscar=chamado');
+
+    try {
+        if (response.ok) {
+            const dados = await response.json();
+            console.log(dados);
+        }else{
+            throw new Error(`Erro HTTP! Status: ${response.status}`);
+        }
+    } catch (error) {
+        console.error('Erro ao buscar dados para o gráfico:', error);
+        ctx.getContext('2d').fillText("Erro ao carregar dados do gráfico.", 10, 50);
+        return;
+    }
+
+    const label = [];
+    const valores = [];
+    dados.array.forEach(dadosChamdosStatus => {
+        label.push(dadosChamdosStatus.status);
+        valores.push(dadosChamdosStatus.total   )
+    });
+
+    const ctx = document.getElementById('canvas-dash');
+  
+  
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: label,
+            datasets: [{
+                label: '# of Votes',
+                data: valores,
+                backgroundColor: [ // Cores para as barras
+                    'rgba(255, 99, 132, 0.5)', // Vermelho (Aberto)
+                    'rgba(255, 206, 86, 0.5)', // Amarelo (Em Andamento)
+                    'rgba(75, 192, 192, 0.5)'  // Verde (Finalizado)
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+}
