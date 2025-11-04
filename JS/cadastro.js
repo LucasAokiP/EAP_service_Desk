@@ -6,18 +6,22 @@ const confSenha = document.getElementById('input-confirmar-senha');
 const form = document.getElementById('form-cadastro');
 
 form.addEventListener('submit', function(e) {
-    e.preventDefault();
-
     if (!nome.value || !idade.value || !email.value) {
         alert("Por favor, preencha todos os campos!");
+        e.preventDefault();
+        return;
+    }
+    if(senha.value !== confSenha.value){
+        alert("As senhas não coincidem!");
+        e.preventDefault();
         return;
     }
     
-    if(senha.value !== confSenha.value){
-        alert("As senhas não coincidem!");
-        return;
-    }
-
     alert("Cadastro realizado com sucesso!");
     window.location.href = "./login.html";
 });
+
+/*
+Fazer um validador para cada campo para caso de erro no campo pinta ele de vermelho
+document.getElementById("input-nome").style.borderColor = "Red";
+*/
