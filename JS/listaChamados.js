@@ -1,6 +1,6 @@
 
 async function carregarDados() {
-    debugger
+
 
     const listaChamadosContainer = document.getElementById('lista-chamados');
     // Adiciona feedback de carregamento no contêiner correto
@@ -72,14 +72,32 @@ document.addEventListener('DOMContentLoaded', carregarDados);
 
 
 async function graficoBarras() {
+    debugger
 
-    const response = fetch('http//localhost:8000/buscar=chamado');
+
+    const canvasDash = document.getElementById('canvas-dash');
+
+    if (canvasDash) {
+        canvasDash.innerHTML = '<div>Carregando graficos...</div>';
+    } else {
+        console.error('Contêiner #lista-chamados não encontrado.');
+        return;
+    }
+
+    const label = [];
+    const valores = [];
 
     try {
+        const response = await fetch('http://localhost:8000/contar-chamados');
         if (response.ok) {
             const dados = await response.json();
+            resutladoDados = dados.resultado;
             console.log(dados);
-        }else{
+            resutladoDados.forEach(dadosChamdosStatus => {
+                label.push(dadosChamdosStatus.status);
+                valores.push(dadosChamdosStatus.total)
+            });
+        } else {
             throw new Error(`Erro HTTP! Status: ${response.status}`);
         }
     } catch (error) {
@@ -88,16 +106,14 @@ async function graficoBarras() {
         return;
     }
 
-    const label = [];
-    const valores = [];
-    dados.array.forEach(dadosChamdosStatus => {
-        label.push(dadosChamdosStatus.status);
-        valores.push(dadosChamdosStatus.total   )
-    });
+
+
+
+
 
     const ctx = document.getElementById('canvas-dash');
-  
-  
+
+
     new Chart(ctx, {
         type: 'bar',
         data: {
@@ -128,3 +144,4 @@ async function graficoBarras() {
     });
 
 }
+document.addEventListener('DOMContentLoaded', graficoBarras);

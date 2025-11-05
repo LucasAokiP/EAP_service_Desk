@@ -17,31 +17,34 @@
             <a href="./paginaPrincipal.html">Home</a>
             <a href="./cadastro.html">Cadastro</a>
             <a href="./chamado.html">Chamados</a>
-            <a href="./solicitacaoChamdo.html">solicitacaoChamdo</a>
-            <a href="./gerenciarChamado.html">Gerenciar chamado</a>
+            
+            
         </nav>
     </header>
-
-    <div class="conteiner-dashboard">
-        <canvas id="canvas-dash" class="canvas-dashboard" onchange="graficoBarras()">
+    <div class="pagina-principal">
+        <div class="conteiner-dashboard">
             <h2>Visão Geral dos Chamados</h2>
-        </canvas>
-
-    </div>
-    <div class="container-lista">
-        <h1>Lista de Chamados</h1>
-
-
-        <div id="lista-chamados">
+            <canvas id="canvas-dash" class="canvas-dashboard" onchange="graficoBarras()">
+                
+            </canvas>
 
         </div>
+        <div class="conteiner">
+            <div class="container-lista">
+                <h1>Lista de Chamados</h1>
 
-        <button id="btn-carregar-chamdos" onclick="carregarDados()"
-            style="margin-top: 20px; padding: 10px 15px; background: #71b7e6; color: white; border: none; border-radius: 5px; cursor: pointer;">
-            Carregar Lista
-        </button>
+
+                <div id="lista-chamados">
+
+                </div>
+
+                <button id="btn-carregar-chamdos" onclick="carregarDados()"
+                    style="margin-top: 20px; padding: 10px 15px; background: #71b7e6; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                    Carregar Lista
+                </button>
+            </div>
+        </div>
     </div>
-
     <script src="../JS/listaChamados.js"></script>
 </body>
 

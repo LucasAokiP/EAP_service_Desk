@@ -13,11 +13,41 @@ body {
     padding: 20px;
 }
 
-.container-lista {
-    max-height: fit-content;
-    min-width: 80%;
+
+.pagina-principal{
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    max-width: 90%;
+
+}
+.conteiner{
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    width: 95%;
     max-width: 95%;
-    margin: 0 auto;
+    max-height: 80%;
+}
+.container-lista {
+   
+    width: 100%;
+
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.conteiner-dashboard{
+    width: 50%;
+   
+    max-height: 50%;
+    margin-bottom: 40px;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;

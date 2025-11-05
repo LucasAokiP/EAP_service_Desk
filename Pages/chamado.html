@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="main.js" defer></script>
     <title>Service Desk</title>
     <link rel="stylesheet" href="../Styles/chamado.css">
+    <link rel="stylesheet" href="../Styles/header.css">
 </head>
+
 <body>
+    <header>
+        <nav>
+            <a href="./paginaPrincipal.html">Home</a>
+            <a href="./cadastro.html">Cadastro</a>
+            <a href="./chamado.html">Chamados</a>
+
+
+        </nav>
+    </header>
     <div class="container">
         <h2>Abrir Ticket - Service Desk</h2>
         <form id="form-chamado" method="post" action="#" enctype="multipart/form-data">
+
+            <div class="input-group">
+                <label for="Nome">Assunto</label>
+                <input placeholder="Problema a ser resolvido" type="text" id="input-assunto" name="assunto" required>
+            </div>
             <div class="input-group">
                 <label for="topico">Tópico</label>
                 <select id="topico" name="topico" required>
@@ -32,8 +49,23 @@
                 <input type="file" id="anexo" name="anexo" accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
             </div>
 
-            <button class="btn-submit" type="submit">Enviar Ticket</button>
+            <div class="check-box">
+                <div class="check-option">
+                    <input type="radio" id="alta" name="prioridade" value="alta" required>
+                    <label for="alta">Alta</label>
+                </div>
+                <div class="check-option">
+                    <input type="radio" id="media" name="prioridade" value="media">
+                    <label for="media">Média</label>
+                </div>
+                <div class="check-option">
+                    <input type="radio" id="baixa" name="prioridade" value="baixa">
+                    <label for="baixa">Baixa</label>
+                </div>
+            </div>
+            <button id="btn-enviar-ticket" class="btn-submit" type="submit">Enviar Ticket</button>
         </form>
     </div>
 </body>
+
 </html>
