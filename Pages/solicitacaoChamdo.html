@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Styles/login.css">
-    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/nav.css">
     <link rel="stylesheet" href="../Styles/solicitaChamado.css">
 </head>
 
@@ -28,43 +27,45 @@
                 <label for="Nome">Assunto</label>
                 <input placeholder="Problema a ser resolvido" type="text" id="input-assunto" name="assunto" required>
             </div>
-            <div class="input-group">
-                <label for="Categoria">Categoria</label>
-                <input class="input-group" placeholder="Selecione uma categoria" type="" id="input-categoria"
-                    name="categoria" required>
-            </div>
+
             <div class="input-categoria">
                 <label for="dropdown">Escolha uma categoria:</label>
                 <select id="categoria" name="categoria">
-
 
                     <option class="input-categoria-option" value="option1">Hardware</option>
                     <option class="input-categoria-option" value="option2">Software</option>
 
                 </select>
             </div>
-            <label>Prioridade do Chamado:</label>
-            <div class="check-box">
-                <div class="check-option">
-                    <input type="radio" id="alta" name="prioridade" value="alta" required>
-                    <label for="alta">Alta</label>
-                </div>
-                <div class="check-option">
-                    <input type="radio" id="media" name="prioridade" value="media">
-                    <label for="media">Média</label>
-                </div>
-                <div class="check-option">
-                    <input type="radio" id="baixa" name="prioridade" value="baixa">
-                    <label for="baixa">Baixa</label>
-                </div>
-            </div>
 
             <div class="input-group">
                 <label for="descricao">Detalhes do Problema</label>
                 <textarea id="descricao" name="descricao" rows="5"
-                    placeholder="Descreva o problema em detalhes"
-                    required></textarea>
+                placeholder="Descreva o problema em detalhes"
+                required></textarea>
             </div>
+
+            <label>Prioridade Do Chamado</label>
+            <fieldset class="priority-group" aria-labelledby="prioridade-label">
+
+              <div class="priority-options" role="radiogroup" aria-required="true">
+                <label class="priority-option" data-level="alta">
+                  <input type="radio" id="alta" name="prioridade" value="alta" required>
+                  Alta
+                </label>
+
+                <label class="priority-option" data-level="media">
+                  <input type="radio" id="media" name="prioridade" value="media">
+                  Média
+                </label>
+
+                <label class="priority-option" data-level="baixa">
+                  <input type="radio" id="baixa" name="prioridade" value="baixa">
+                  Baixa
+                </label>
+              </div>
+            </fieldset>
+            
             <button class="btn" type='submit' id="btn-cadastrar">
                 Abrir chamado
             </button>
