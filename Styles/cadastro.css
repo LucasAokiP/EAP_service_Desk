@@ -58,15 +58,14 @@ body {
 
 .input-success,
 .input-valido {
-  border-color: #1aa73d !important; /* verde */
+  border-color: #1aa73d !important;
 }
 
 .input-error,
 .input-erro {
-  border-color: #e53935 !important; /* vermelho */
+  border-color: #e53935 !important;
 }
 
-/* Mensagem de erro abaixo do campo */
 .error-message {
   color: #e53935;
   font-size: 13px;
